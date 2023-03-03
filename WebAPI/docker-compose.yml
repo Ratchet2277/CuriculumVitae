@@ -1,4 +1,4 @@
-﻿version: "3.7"
+﻿version: "3.8"
 
 services:
   web-api:
@@ -6,13 +6,35 @@ services:
       context: ..
       dockerfile: WebAPI/Dockerfile
     ports:
-      - "5000:80"
       - "5001:443"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:80;https://+:443
+      - ASPNETCORE_URLS=https://+:443
       - ASPNETCORE_FORWARDEDHEADERS_ENABLED=true
       - ASPNETCORE_Kestrel__Certificates__Default__Password=1234
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
     volumes:
       - $USERPROFILE\.aspnet\https:/https/
+  client-app:
+    build:
+      context: ../client-app
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - web-api
+    volumes:
+      - ./../client-app:/usr/src/app/my-app
+      - /usr/src/app/my-app/node_modules
+    environment:
+      - WATCHPACK_POLLING=true
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data

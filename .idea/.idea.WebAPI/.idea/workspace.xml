@@ -7,27 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5efc752-b4d3-4255-851b-33399ae1ab7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WebAPI/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CuriculumVitae.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/docker-compose.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-app/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/docker-compose.json" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2MUsUN6ylfpxs3iI3XuJ4uRCKf8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -52,7 +48,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Docker.WebAPI: Compose Deployment">
+  <component name="RunManager" selected="Docker.WebAPI.client-app: Compose Deployment">
     <configuration name="WebAPI: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WebAPI/WebAPI.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net7.0" />
@@ -126,6 +122,20 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isPublishEnabled="true" />
       <method v="2" />
     </configuration>
+    <configuration name="WebAPI.client-app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="client-app" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="WebAPI/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isPublishEnabled="true" />
+      <method v="2" />
+    </configuration>
     <configuration name="WebAPI.web-api: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -151,9 +161,20 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isPublishEnabled="true" />
       <method v="2" />
     </configuration>
+    <configuration name="client-app/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="client-app/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isPublishEnabled="true" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.WebAPI.client-app: Compose Deployment" />
         <item itemvalue="Docker.WebAPI: Compose Deployment" />
+        <item itemvalue="Docker.client-app/Dockerfile" />
         <item itemvalue="Docker.WebAPI/Dockerfile" />
         <item itemvalue="Docker.WebAPI.web-api: Compose Deployment" />
       </list>
@@ -168,15 +189,42 @@
       <option name="presentableId" value="Default" />
       <updated>1677833517139</updated>
       <workItem from="1677833517141" duration="2488000" />
-      <workItem from="1677840139116" duration="2811000" />
+      <workItem from="1677840139116" duration="6033000" />
     </task>
+    <task id="LOCAL-00001" summary="Create Base API with Docker Support">
+      <created>1677843358767</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677843358767</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add .idea .gitignore">
+      <created>1677843410575</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677843410575</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add .idea folder">
+      <created>1677843432775</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677843432775</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Create Base API with Docker Support" />
+    <MESSAGE value="add .idea .gitignore" />
+    <MESSAGE value="add .idea folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="add .idea folder" />
   </component>
 </project>
